@@ -13,7 +13,7 @@ node {
    }
    stage('docker build/push') {
      docker.withRegistry('http://192.168.10.20:5000/v2') {
-       def app = docker.build("192.168.10.20:5000/docker-Jenkinsfile-nodejs:${commit_id}", '.').push()
+       def app = docker.build("192.168.10.20:5000/docker-jenfile-nodejs:${commit_id}", '.').push()
      }
    }
 }
