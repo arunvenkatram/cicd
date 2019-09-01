@@ -1,4 +1,4 @@
-job(Nodejs Example) {
+job('Nodejs Example') {
 	scm {
 		git('https://github.com/arunvenkatram/docker-demo.git') {
 		node / gitConfigName('DSL User')
