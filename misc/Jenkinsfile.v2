@@ -24,8 +24,8 @@ node {
      mysql.stop()
    }                                     
    stage('docker build/push') {            
-     docker.withRegistry('http://192.168.10.20:5000/v2', 'none') {
-       def app = docker.build("192.168.10.20:5000/docker-Jenkinsfile-nodejs:${commit_id}", '.').push()
+     docker.withRegistry('http://192.168.10.20:5000/v2') {
+       def app = docker.build("192.168.10.20:5000/docker-jenfile-full-nodejs:${commit_id}", '.').push()
      }                                     
    }                                       
 }                                          
